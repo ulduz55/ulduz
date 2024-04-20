@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="aze">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SƏKİ XAN SARAYı</title>
+    <link rel="icon" type="image/x-icon" href="/sekil/logo.png">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: rgb(26, 24, 24);
+            /* background: rgb(37, 23, 5);  */
+            height: 100vh;
+            background-size: 100% 100%;
+        }
+        
+        .usthisse {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 999; 
+            border-bottom: 2px solid rgb(240, 237, 233); 
+            backdrop-filter: blur(5px);
+            display: flex;
+            justify-content: center; 
+            align-items: center; 
+            margin-top: 0; 
+            background-color: rgba(37, 23, 5, 0.7); 
+            padding: 10px; 
+        }
+
+        .img {
+            height: 100%;
+            width: 100%;
+        }
+        
+        
+        .logo img {
+            width: 100px; 
+            height: 70px;
+            margin-left: 30px; 
+            margin-right: 30px;
+            transition: width 0.3s ease, height 0.3s ease; 
+            
+        }
+        
+        .menu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        
+        .menu ul li {
+            margin-right: 80px;
+        }
+        
+        .menu ul li:last-child {
+            margin-right: 10px; 
+        }
+        
+        .menu ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 18px;
+        }
+        
+        .menu ul li a:hover {
+            color: rgb(185, 163, 37);
+        }
+        .menu ul li {
+        position: relative;
+        }
+
+        .menu ul li:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -3px;
+            width: 100%;
+            height: 3px;
+            background-color: transparent;
+            transition: background-color 0.5s ease;
+        }
+
+        .menu ul li:hover:after {
+         background-color: gold;
+        }
+
+
+        footer{
+            background-color: rgb(37, 23, 5);
+            color: #ffffff;
+        }
+
+        .melumat {
+            
+            display: flex;
+            list-style-type: none;
+            
+            justify-content: center; 
+            align-items: center;
+            justify-content: space-between;
+            text-align: center
+            
+        }
+
+        .email {
+            list-style-type: none;
+            margin-left: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; 
+
+         }
+
+         .email a:hover {
+            color: rgb(185, 163, 37);
+         }
+
+        .telefonlar {
+           
+            list-style-type: none;
+            margin-right: 50px;
+            
+        }
+        .telefonlar li {
+            color: #ffffff;
+        }
+        .telefonlar a:hover{
+            color:rgb(185, 163, 37) ;
+        }
+
+        .kopya {
+            text-align: center;
+        }
+        .email a,
+        .telefonlar a {
+            color: #ffffff; 
+        }
+        .xett {
+            color: rgba(37, 23, 5,);
+        }
+        h1 {
+            
+            color: #e38409;
+            font-weight: bold; /* Qalın şrift */
+            font-size: 36px;
+            line-height: 1.6;
+            
+        }
+
+        p {
+
+            color: #ffffff;
+            font-weight: bold; /* Qalın şrift */
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .sekil{
+            max-width: left;
+        }
+
+        .movzu2 {
+    
+        margin-top: 0px; 
+     
+}
+
+.movzu2 h1 {
+    color: #e48f10;
+    font-size: 32px; 
+    text-align: center;
+}
+
+.movzu2 .line {
+    border-top: 3px solid #944606; 
+    width: 70%;
+    margin: 15px auto; 
+}
+
+.movzu2 p {
+    color: rgb(204, 204, 204);
+    font-weight: bold;
+    font-size: 20px; 
+    line-height: 1.6;
+    margin-left: 5px;
+}
+
+
+        .movzu2 {
+            display: flex;
+            align-items: center; 
+            justify-content: space-around; 
+            padding: 20px; 
+        }
+        .metin2 {
+    flex: 1; 
+    padding-right: 20px;
+}
+
+        .sekil2 img {
+            width: 630px; 
+            height: 630px; 
+            object-fit: cover;
+            border-radius: 10px; 
+        }
+            .movzu2 {
+                padding: 0px; 
+                 
+                 border-radius: 15px; 
+}
+.metin5 p{
+    color: rgb(204, 204, 204);
+    font-weight: bold;
+    font-size: 20px; 
+    line-height: 1.6;
+    margin-left: 5px;
+}
+ 
+    </style>
+</head>
+<body>
+    
+    <script>
+        window.addEventListener('scroll', function() {
+            var scrollPosition = window.scrollY;
+            var header = document.querySelector('.usthisse');
+            var logo = document.querySelector('.logo img');
+
+            if (scrollPosition > 0) {
+                header.style.backgroundColor = 'rgb(17, 10, 1, 0.9)';
+                logo.style.width = '80px';
+                logo.style.height = '50px';
+            } else {
+                header.style.backgroundColor = 'rgba(37, 23, 5, 0.7)'; 
+                logo.style.width = '100px';
+                logo.style.height = '70px';
+            }
+        });
+    </script>
+    
+    <div class="usthisse">
+        <div class="menu">
+            <ul>
+                <li><b><a href="rezerv.html">Rezerv Et</a></b></li>
+                <li><b><a href="tarix.html">Tarixi</a></b></li>
+                <li><b><a href="media.html">Media</a></b></li>
+            </ul>
+        </div>
+
+        <div class="logo">
+            <a href="index.html"><img src="sekil/logo.png" alt="Şəki Xan SARAYı"></a>
+        </div>
+
+        <div class="menu">
+            <ul>
+                <li><b><a href="haqqinda.html">Haqqında</a></b></li>
+                <li><b><a href="xerite.html">Xəritə</a></b></li>
+                <li><b><a href="elaqe.html">Əlaqə</a></b></li>
+            </ul>
+        </div>
+    </div>
+<br><br><br><br><br><br>
+<div class="movzu2">
+    <div class="sekil2">
+        <img src="sekil/qedimsaray.jpg" alt="xancinar">
+    </div>
+    
+    <div class="metin2">
+
+        <h1>Şəki xanlarının sarayı</h1>
+        <div class="line"></div> 
+        <p> — Şəkidə yerləşən tarixi sənət əsəri. Şəki xan sarayı dünya abidələri siyahısına daxil edilmişdir.
+
+            Şəki xanlarının yay sarayı 1761-1762 illərdə Azərbaycanda ilk müstəqil xanlığın əsasını qoyan Hacı Çələbi xanın dövründə
+             tikilmişdir.Hüseyn  xan  eyni zamanda şair olduğu üçün «Müştaq imarəti»kimi də qeyd olunmuşdur.
+            
+            Qala divarları ilə əhatə olunan Xan sarayı ikimərtəbəli olmaqla altı otaqdan, dörd dəhlizdən,
+             iki güzgülü eyvandan ibarətdir.
+            
+            Bu bina daha əvvəllər «Divanxana» adlanmışdır. Şəki xanlığı Rusiya tərəfindən işğal edildikdən
+             sonra isə «Qorodskoy sud», yəni şəhər məhkəməsi oldu. Binanın tikintisinə 1761-1762-cı ildə başlanılıb. 
+             Çox vax onun tikilmə tarixini səhvən «Şəkixanovların evi»nin («Müştaq imarəti» -«Qurğuşunlu Otaq»ın)
+              tikilmə tarixi ilə qarışdırırlar.1789-1790-cı ildə Məhəmmədhəsən xan tərəfindən tikdirilmişdir.
+               Binanın, inşasına 32 min çervon, yaxud, 32 min İran tüməni məbləğində pul xərclənmişdir. 1 rus çervonu, yaxud İran tüməni o vaxtlar 3,4 qram çəkidə qızıl idi və Şəki xanlığında, 
+               1 il ərzində yığılan töycü (vergi) heç 7 min çervona çatmırdı. Amma hələlik müəyyənləşdirmək mümkün deyil ki, 
+               32 min çervon yalnız bu binanın inşasına sərf olunub, yaxud, bütün qalanın tikintisinə. Memar şirazlı Zeynal 
+               Abdulladır. O ki qaldı qalanın inşasına, o biyar yolu ilə, tikilmişdir. Yəni, xanlıq əhalisi xan qarşısında 
+               öhdəlik daşıyırdılar ki, lazım olduqda (həftədə, yaxud ayda?) 1 gün xan üçün pulsuz işləməlidirlər. </p>
+        
+    </div>        
+    
+</div>
+    
+
+    
+    <div class="metin5">
+        <p>
+               
+               Qaladakı indiki kilsə, 1828-ci ilə qədər Xanın ev məscidi idi və göstərilən ildə ruslar tərəfindən 
+               indiki formaya, yəni xaç formasına salınmış və kilsə edilmişdir. Ruslar xanın hərəmxanasının yerində isə 
+               türmə binası tikiblər. Qalanın dörd küncündəki 4 böyük bürc də ruslar tərəfindən inşa edilmişdir. 
+               Yuxarıda göstərdiyimiz kimi, Şəki Xan sarayının tikilmə tarixi tam dəqiqliyi ilə məlumdur!
+                Hicri 1204-cü, yəni miladi 1789-1790-cu illər. Memar isə şirazlı Zeynal Abdulladır! Buna baxmayaraq,
+                 Azərbaycan Respublikası Mədəniyyət Nazirliyi Şəki Xan sarayının qarşısında bir lövhə asıb ki, 
+                 «Bu bina 18-19-cu əsrlərdə tikilmişdir». Həmçinin, süni surətdə binanın tarixini 25 il əvvələ atırlar,
+                  memarı haqqında isə heç nə demirlər.Sarayın hər iki mərtəbəsi eyni quruluşdadır.
+                  
+                  Mərkəzdə böyük salon və salonun hər iki tərəfindəki dəhlizlərə bitişən yan otaqlar vardır.
+                   Binanın plan quruluşu, yəni hər mərtəbədə 3 otağın olması cənub hissədə aydın əks olunur.
+                    Mərtəbələr daxildən pilləkənlərlə əlaqələndirilib. Salonların şimal hissəsində iki kiçik otaq 
+                    arasında xanişin adlanan yerləşkələr var. Tavanı güzgülənmiş alt xanişində fəvvarəli mərmər hovuz
+                     tikilmişdir.Binanın baş fasadı dünyada analoqu olmayan ən xırda, həndəsi fiqurlara bölünmüş,
+                      ağac parçaların aralarına müxtəlif rəngli şüşələr geyindirilmiş şəbəkə pəncərə və qapılardan ibarətdir. 
+                      Şəbəkələrin hər bir kvadrat metri orta hesabla 5000, mürəkkəb yerləri 14000 ağac və şüşə şəbəkədən ibarətdir. 
+                      Binada mismar və yapışqandan istifadə edilməmiş, ağac və şüşə parçaları bir-birinə geyindirilmişdir. 
+                      Saray divarın ornamentliyi, piştağların genişliyi, naxışlı şəbəkələr, müxtəlif naxışlar, gəc üzərində
+                       oymalar məharətlə işlənmişdir. Binanın daxilində həndəsi naxışlara, nəbatat rəsmlərinə, süjetli və 
+                       quş rəsmlərinə, döyüş və ov səhnələrinə daha geniş yer verilmişdir. Zövqlə işlənmiş taxçalar, güzgülü
+                        buxarılar əsl sənət nümunəsidir. Saraydakı naxışların zənginliyi, rəng çalarları, stalaktit oymal 
+                        olduqca gözəldir. Otaqların divarları ilə yanaşı tavanı da yaraşıqlı naxışlarla bəzədilmişdir.
+
+                     Dünya şöhrətli türk şairi Nazim Hikmət saraya baxdıqdan sonra belə yazmışdır: «Əgər Azərbaycanın başqa qədim tikililəri olmasaydı, bircə Şəki Xan sarayını dünyaya göstərmək bəs edərdi».
+                     
+                     Şəki xan sarayının çox böyük şöhrət qazanmış divar rəsmləri XVlll əsrdə yaranmışsa da, sonralar dəfələrlə təmir edilmişdir. Sarayının divar təsvirlərini işləyən bir neçə nəqqaş və ustanın adı binanın içində müxtəlif yerlərdə yazılmışdır. Həmin sənətkarların XlX əsrin sonunda binada işləməsi kitabələrdən məlumdur. XVlll əsrdə ilk təsvirləri işləyən nəqqaşın adı bunların içində qeyd edilməyib. Binada ikinci mərtəbənin tavanındakı təsvirdə ustad Abbasqulunun adı yazılmışdır. Ancaq Abbasqulunun bu təsvirləri nə vaxt işləməsi haqqında əlimizdə heç bir məlumat yoxdur. İkinci mərtəbənin salonundakı təsvirləri XlX əsrin axırlarında təmir edən və bəzilərini yenidən işləyən boyaqçının qarabağlı usta Qəmbər olduğu salonun divarlarında qeyd olunmuşdur. XlX əsrin axırlarında xan sarayının birinci mərtəbəsindəki salonun təsvirlərini təmir edən şamaxılı ustad Mirzə Cəfərin adı həmin salonun giriş qapısının yuxarısında yazılmışdır. 1955-1956-cı illərdə memar H.Q Rzayevin lahiyəsi və başçılığı ilə burada geniş bərpa işləri aparılmış və abidə ilkin halına qaytarılmışdır.</p>
+
+    </div>
+
+            
+            
+    <footer>
+        <div class="slthisse">
+            
+                <br>
+                <div class="melumat">
+                    <div class="email">
+                        
+                            <li>E-poçt: <a href="mailto:elicanismayilov@hotmail.com">elicanismayilov@hotmail.com</a></li>
+                            <li>E-poçt: <a href="mailto:ulduzsheki@hotmail.com">ulduzsheki@hotmail.com</a></li>
+                        
+                    </div>
+                    <div class="kopya">
+                        <p>&copy; 2024 Şəki Xan Sarayı - Bütün hüquqlar qorunur.</p>
+                    </div>
+                    <div class="telefonlar">
+                        
+                            <li>
+                                Tel: <a class="telefon" href="tel:+994515798327" target="_blank" rel="noreferrer noopener">+994 (51) 579 83 27</a>
+                            </li>
+                            <li>
+                                Tel: <a class="telefon" href="tel:+994556845542" target="_blank" rel="noreferrer noopener">+994 (55) 684 55 42</a>
+                            </li>
+                        
+                    </div>
+                    
+                </div>
+                
+            
+        </div>
+    </footer>
+
+
+</body>
+</html>

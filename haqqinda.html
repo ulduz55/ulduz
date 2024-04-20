@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="aze">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SƏKİ XAN SARAYı</title>
+    <link rel="icon" type="image/x-icon" href="/sekil/logo.png">
+    <style>
+        body {
+            margin: 0;
+            padding: 0; 
+            background: rgb(26, 24, 24);
+            /* background: rgb(37, 23, 5);  */
+            height: 100vh;
+            background-size: 100% 100%;
+        }
+        
+        .usthisse {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 999; 
+            border-bottom: 2px solid rgb(240, 237, 233); 
+            backdrop-filter: blur(5px);
+            display: flex;
+            justify-content: center; 
+            align-items: center; 
+            margin-top: 0; 
+            background-color: rgba(37, 23, 5, 0.7); 
+            padding: 10px; 
+        }
+
+        .img {
+            height: 100%;
+            width: 100%;
+        }
+        .logo img {
+            width: 100px; 
+            height: 70px;
+            margin-left: 30px; 
+            margin-right: 30px;
+            transition: width 0.3s ease, height 0.3s ease; 
+            
+        }
+        
+        .menu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        
+        .menu ul li {
+            margin-right: 80px;
+        }
+        
+        .menu ul li:last-child {
+            margin-right: 10px; 
+        }
+        
+        .menu ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 18px;
+        }
+        
+        .menu ul li a:hover {
+            color: rgb(185, 163, 37);
+        }
+        .menu ul li {
+        position: relative;
+        }
+
+        .menu ul li:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -3px;
+            width: 100%;
+            height: 3px;
+            background-color: transparent;
+            transition: background-color 0.5s ease;
+        }
+
+        .menu ul li:hover:after {
+         background-color: gold;
+        }
+
+
+        footer{
+            background-color: rgb(37, 23, 5);
+            color: #ffffff;
+        }
+
+        .melumat {
+            
+            display: flex;
+            list-style-type: none;
+            
+            justify-content: center; 
+            align-items: center;
+            justify-content: space-between;
+            text-align: center
+            
+        }
+
+        .email {
+            list-style-type: none;
+            margin-left: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; 
+
+         }
+
+         .email a:hover {
+            color: rgb(185, 163, 37);
+         }
+
+        .telefonlar {
+           
+            list-style-type: none;
+            margin-right: 50px;
+            
+        }
+        .telefonlar li {
+            color: #ffffff;
+        }
+        .telefonlar a:hover{
+            color:rgb(185, 163, 37) ;
+        }
+
+        .kopya {
+            text-align: center;
+        }
+        .email a,
+        .telefonlar a {
+            color: #ffffff; 
+        }
+        .xett {
+            color: rgba(37, 23, 5,);
+        }
+        p {
+
+            color: #090909;
+            font-weight: bold; /* Qalın şrift */
+            font-size: 18px;
+            line-height: 1.6;
+}
+.movzu2 h1 {
+    color: #e48f10;
+    font-size: 32px; 
+    text-align: center;
+}
+
+.movzu2 .line {
+    border-top: 3px solid #944606; 
+    width: 70%;
+    margin: 15px auto; 
+}
+
+.movzu2 p {
+    color: rgb(204, 204, 204);
+    font-weight: bold;
+    font-size: 20px; 
+    line-height: 1.6;
+    margin-left: 5px;
+}
+
+
+        .movzu2 {
+            display: flex;
+            align-items: center; 
+            justify-content: space-around; 
+            padding: 20px; 
+        }
+        .metin2 {
+    flex: 1; 
+    padding-right: 20px;
+}
+
+        .sekil2 img {
+            width: 630px; 
+            height: 630px; 
+            object-fit: cover;
+            border-radius: 10px; 
+        }
+            .movzu2 {
+                padding: 0px; 
+                 
+                 border-radius: 15px; 
+}
+p {
+    color: rgb(204, 204, 204);
+}
+
+
+    </style>
+</head>
+<body>
+    <script>
+        window.addEventListener('scroll', function() {
+            var scrollPosition = window.scrollY;
+            var header = document.querySelector('.usthisse');
+            var logo = document.querySelector('.logo img');
+
+            if (scrollPosition > 0) {
+                header.style.backgroundColor = 'rgb(17, 10, 1, 0.9)';
+                logo.style.width = '80px';
+                logo.style.height = '50px';
+            } else {
+                header.style.backgroundColor = 'rgba(37, 23, 5, 0.7)'; 
+                logo.style.width = '100px';
+                logo.style.height = '70px';
+            }
+        });
+    </script>
+    
+    <div class="usthisse">
+        <div class="menu">
+            <ul>
+                <li><b><a href="rezerv.html">Rezerv Et</a></b></li>
+                <li><b><a href="tarix.html">Tarixi</a></b></li>
+                <li><b><a href="media.html">Media</a></b></li>
+            </ul>
+        </div>
+
+        <div class="logo">
+            <a href="index.html"><img src="sekil/logo.png" alt="Şəki Xan SARAYı"></a>
+        </div>
+
+        <div class="menu">
+            <ul>
+                <li><b><a href="haqqinda.html">Haqqında</a></b></li>
+                <li><b><a href="xerite.html">Xəritə</a></b></li>
+                <li><b><a href="elaqe.html">Əlaqə</a></b></li>
+            </ul>
+        </div>
+    </div>
+
+    
+    <br><br><br><br><br><br>
+
+
+
+
+    <div class="movzu2">
+        <div class="sekil2">
+            <img src="sekil/turist4.jpg" alt="xancinar">
+        </div>
+        
+        <div class="metin2">
+    
+            <h1>HAQQINDA</h1>
+            <div class="line"></div> 
+            <p> Azərbaycan memarlığında möhtəşəm yeri olan Şəki Xan sarayı hər bir qonağını təəccübləndirən
+                orijinal sənət əsəridir. Dünya abidələri siyahısına daxil edilmiş bu sarayın özünəməxsus
+                inşa üslubu var. Burada tətbiqi incəsənətin bir çox növləri, eləcə də XVIII-XIX əsrlərə 
+                məxsus divar rəssamlığı nümunələri öz əksini tapıb.
+                Şəki xanlarının yay sarayı olan bu binanın kim tərəfindən tikdirilməsi haqqında dəqiq elmi 
+                məlumat yoxdur. Bəzi mənbələrə əsasən, saray Azərbaycanda ilk müstəqil xanlığın əsasını qoyan
+                Hacı Çələbi xanın nəvəsi Məhəmmədhüseyn xanın dövründə tikilmişdir. Hüseyn xan eyni zamanda
+                “Müştaq” təxəllüsü ilə şeirlər yazdığına görə saray bəzi mənbələrdə “Müştaq imarəti” kimi
+                də qeyd olunmuşur. Tarixi mənbələrdə Hüseyn xanın əmisi tərəfindən burada əsir saxlanıldığı 
+                və boğularaq qətlə yetirildiyi göstərilir. Qeyd edək ki, Hüseyn xan Müştaq Azərbaycanın məşhur
+                şairləri Molla Pənah Vaqif və Molla Vəli Vidadi ilə dost olmuşdur. Vidadi öz “Müsibətnamə” 
+                əsərini də onun ölümü münasibətilə yazmışdır.
+                Başqa bir mənbədə isə bu binanın XVIII əsrin sonunda Məhəmmədhüseyn xanın oğlu Məhəmmədhəsən 
+                xan tərəfindən tikdirildiyi və “Məhəmmədhəsən xan divanxanası” adlandırıldığı xəbər verilir.
+                Şəki Xan sarayı üzü cənuba baxan ikimərtəbəli binadır. Binanın bir cərgədə yerləşən üç hissəsi 
+                bir-birindən dəhlizlə ayrılır.
+                Mərtəbələrin quruluşu eynidir,bura yolu düşən hər bir şəxsi, ilk növbədə, heyrətə gətirən, binanın 
+                fasadındakı şəbəkə pəncərə 
+                və qapılardır. 
+            </p>
+            
+        </div>        
+        
+    </div>
+
+
+
+
+
+    <p>
+        Dünyada analoqu olmayan bu şəbəkələr çox xırda həndəsi fiqurlardan ibarətdir. Şəbəkəni
+                yaradan ağac parçalarının aralarına müxtəlif rəngli şüşələr geydirilmişdir. Hər bir kvadratmetrdə
+                orta hesabla 5000, mürəkkəb yerlərdə isə 14000 ağac və şüşə element vardır. Rəngli şüşələrdən düşən 
+                işıq divarlarda və döşəmədə əks olunaraq əlvan şəbəkə kölgələri yaradır. Ən maraqlısı isə odur ki, 
+                şəbəkələrin hazırlanmasında və ümumiyyətlə, binanın tikintisində nə yapışqandan, nə də mismardan
+                istifadə edilib.
+        Binanın daxilində həndəsi və nəbati naxışlara, quş şəkillərinə, süjetli rəsmlərə – döyüş və ov 
+        səhnələrinə daha geniş yer verilib. Zövqlə işlənmiş taxçalar, güzgülü buxarılar əsl sənət nümunəsidir.
+        Taxçalar Nizami Gəncəvinin “Yeddi gözəl”, “Leyli və Məcnun” poemalarına çəkilmiş illüstrasiyalarla 
+        bəzədilib. Salonun qalan sahəsi isə rəsmli, ornamentli şəbəkələrlə işlənib. Otaqların divarları ilə 
+        yanaşı, tavanını da incə naxışlar bəzəyir.
+        Şəki Xan sarayının memarı şirazlı Zeynal Abidin olmuşdur.
+        Divar rəsmləri XVIII əsrdə yaradılsa da, sonralar dəfələrlə bərpa edilib. Sarayın divar təsvirlərini 
+        işləyən bir neçə nəqqaş və ustanın adı binanın içində müxtəlif yerlərdə yazılıb. Burada şuşalı usta Qəmbərin,
+        şamaxılı ustalar Əliqulu və Qurbanəlinin, rəssam-nəqqaş Mirzə Cəfərin adlarına rast gəlmək mümkündür.
+        Divarlardakı kitabələrdən məlum olur ki, həmin sənətkarlar XlX əsrin sonunda binada işləmişlər.
+        XVIII əsrdə ilk təsvirləri işləyən nəqqaşın adı isə, ..., bunların içində qeyd edilməyib. İkinci 
+        mərtəbənin tavanındakı təsvirdə usta Abbasqulunun adı yazılıb. Ancaq Abbasqulunun bu təsvirləri nə 
+        vaxt işləməsi haqqında əlimizdə heç bir məlumat yoxdur.
+        Azərbaycan incəsənətinin möhtəşəm əsəri əsarət dövrünün acı zərbələrinə sinə gərib yaşadı, gözəllik
+        və əzəmətini qoruya bildi. Vaxtilə rus müstəmləkəçilərinin qəddar münasibəti ilə üzləşən, məscidi 
+        rus kilsəsinə, hərəmxanası türməyə çevrilmiş sarayda mütəxəssislər dəfələrlə bərpa işləri apardılar 
+        və abidə ilkin halına qaytarıldı.
+        Bu gün Şəki Xan sarayı öz gözəlliyi, qədimliyi, qeyri-adi memarlıq üslubu ilə turistlərin ən çox üz 
+        tutduğu məkanlardandır. Sarayın qarşısında əkilmiş yüzillik xan çinarlar isə sanki tarixin səhifələrindən 
+        öz açır, gələnləri XVIII əsrə dəvət edir.Xan çinarından keçmişdə şəbəkə hazırlanmasında çox istifadə edilib.
+         Hazırda “Qırmızı kitab”a salınan ağac növü olduğu üçün sənətkarlıqda, şəbəkədə istifadə edilmir. 
+         Qoruq ərazisində yaşı 200-300-ə çatan 23 ədəd çinar ağacı var. Onlar mühafizə edilən təbiət abidələri hesab 
+         edilir. Yerli sakinlərin müqqədəs saydığı çinar ağacı şəhərin mühüm yerlərində əkilirdi. İnsanların fədakarlığı 
+         sayəsində qoca çinarlar Şəkini və onun söykəndiyi dağları hələ də bəzəyir. Çinar bitdiyi yerin havasını 
+         ionlaşdıraraq təbii kondisioner rolunu oynayır, havanı təravətləndirir.
+        Sarayın hər iki mərtəbəsinin mərkəzi zalları və ikinci mərtəbənin yan otaqlarının bütün divar səthləri, 
+        
+        nişlər, divarlardan plafonlara stalaktit formalı keçidlər və plafonlar rəsmlərlə örtülmüşdür. Saray rəsmləri
+         dörd qrupa bölünür: həndəsi və nəbati naxışlardan ibarət rəsmlər, süjetli rəsmlər, heyvan rəsmləri və bitki
+          və heyvanların birgə təsvir edildiyi rəsmlər.[55] Xan sarayının rəsmləri üçün həm də qızılı rəngin geniş 
+          istifadəsi xarakterikdir. Rəsmlər gips levkası üzərində o dövrün bütün divar rəsmləri kimi yumurta temperası
+           ilə yerli tonlarla işlənmişdir. Rəssamlar qızılı, firuzəyi, qırmızı, bənövşəyi və sarı rənglərə üstünlük vermişlər.[30].
+
+        </p>
+           <div class="movzu2">
+            
+            
+            <div class="metin2">
+        
+                
+                
+                <p>  Əsas fasad zəngin bəzədilmişdir. Sqrafitto üsullu və relyefli rəngli üzlüklə işlənmiş həndəsi və nəbati naxışlar, 
+                    stalaktitli tağlar və rəngarəng yığma şəbəkəli vitrajlar sarayın fasadına qeyri-adi bayram əhvalı verir.[55] Aşağı 
+                    mərtəbənin pannolarında həyat ağacına üzünü tutmuş, bir zamanlar Azərbaycanda müqəddəs hesab edilən tovuzquşuları 
+                    təsvir edilmişdir.
+                    
+                                                            Sarayın daxili də divar rəsmləri və naxışlarla bəzədilmişdir; nişlər (taxça), buxarı, tavanlar, stalaktitli karnizlər,
+                     işıqlandırma naxışlı şəbəkə-pəncərələrin rənglü şüşələri vasitəsiylə həyata keçirilir – bütün bunlar birlikdə dəbdəbəli
+                      saray mühiti yaradır. ŞƏBƏKƏ. Şəbəkəçilik ağacişləmə sənətinin bədii sahələrindən, böyük məharət tələb edən növlərindən
+                       biridir. Şəbəkələr kiçik ölçülü taxta və şüşə parçalarını bir-birinə geydirməklə hazırlanır. Şəbəkələrin hər kvadratmetri
+                        orta hesabla 5 min taxta və rəngli şüşə parçalarından yığılır. Mürəkkəb hissələrdə detalların sayı 14 minə çatır. 
+                        Abidədə işlədilən şəbəkələr çinar və cökə ağaclarından yığılıb. Digər konstruktiv elementlər fıstıq, qoz, palıd 
+                        ağaclarındandır. Azərbaycan şəbəkə sənətinin gözəl nümunələrinə Şəki Xan sarayı ilə yanaşı, Şəkixanovların evində
+                         də rast gəlinir. Bundan başqa, Hüseynqulu xanın XVII əsrdə İrəvanda tikdirdiyi saray, Kərim Mehmandarovun XIX əsrdə 
+                         Şuşada tikdirdiyi yaşayış evi də Azərbaycan şəbəkə sənətinin nümunəvi abidələrindəndir.Mərtəbələr elə böyük hündürlüyə 
+                         malik olmasa da (cəmi 3.35 m) memar ustalıqla illüziya
+                      vasitəsiylə hündür təəssürat yarada bilmişdir.
+                </p>
+                
+            </div>        
+            <div class="sekil2">
+                <img src="sekil/shebeke.jpg" alt="xancinar">
+            </div>
+            
+        </div>
+
+        <p> 
+                                   
+
+İnteryerləri bəzəyən rəsmlər müxtəlif dövrlərdə və müxtəlif rəssamlar tərəfindən işlənmişdir; onlar arasında "firəng" 
+rəssamları (Avropa rəssamları nəzərdə tutulur) tərəfindən işlənmiş və aşağı zalın plafonunun stalaktitlərində saxlanmış
+ rəsmlər, Şuşadan olan məşhur rəssam Usta Qənbər, onun qardaşı Usta Səfər və oğlu Şükür tərəfindən işlənmiş rəsmlər, 
+ Şamaxıdan olan rəssamlar Əliqulu, Qurbanqulu və Cəfər tərəfindən işlənmiş rəsmlər, həmçinin Abbasəli tərəfindən 
+ işlənmiş rəsmlər vardır.
+
+İnteryerlərdəki ən qədim rəsmlər XVIII əsrə aiddir ki, onlar arasında Abbasqulu tərəfindən ikinci mərtəbədə əsas zalın 
+tavanında işlənmiş rəsmlər də vardır. Sarayın divarlarında da adı saxlanmış Abbasqulunun həm də memar olması ehtimal 
+edilir. Birinci mərtəbənin rəsmləri 1895–1896-cı illərdə Şamaxıdan olan Mirzə Cəfər tərəfindən, ikinci mərtəbənin 
+rəsmləri isə 1902-ci ildə Şuşadan olan Usta Qənbər tərəfindən işlənmişdir. Şamaxıdan olan rəssamlar Əliqulu və
+ Qurbanqulu əsasən yuxarı mərtəbədəki otaqlarda işləmişlər.
+
+Digər rəssamların işləri isə əsasən hər iki mərtəbənin əsas zallarında, o cümlədən ikinci mərtəbənin yan otaqlarının 
+divarlarında yerləşir.<br>Azərbaycanın ən qədim şəhərlərindən və mədəniyyət mərkəzlərindən olan Şəki ilin bütün
+ fəsillərində turistləri özünə cəlb edir.Turistlərin ən çox üz tutduqları tarixi məkanlardan biri də “Yuxarı Baş” Dövlət 
+ Tarix-Memarlıq Qoruğunun ərazisidir. Bu ərazidə yerləşən muzey və karvansaraylar, XVIII əsrə aid dünya əhəmiyyətli 
+ nadir tarixi-memarlıq abidəsi - Şəki Xan Sarayı, həmçinin “ABAD” Keramika və Tətbiqi Sənət Mərkəzi, “Sənətkarlar evi” 
+ yerli və xarici turistlərin daha çox marağına səbəb olur.</p>
+
+
+    <footer>
+        <div class="slthisse">
+            
+                <br>
+                <div class="melumat">
+                    <div class="email">
+                        
+                            <li>E-poçt: <a href="mailto:elicanismayilov@hotmail.com">elicanismayilov@hotmail.com</a></li>
+                            <li>E-poçt: <a href="mailto:ulduzsheki@hotmail.com">ulduzsheki@hotmail.com</a></li>
+                        
+                    </div>
+                    <div class="kopya">
+                        <p>&copy; 2024 Şəki Xan Sarayı - Bütün hüquqlar qorunur.</p>
+                    </div>
+                    <div class="telefonlar">
+                        
+                            <li>
+                                Tel: <a class="telefon" href="tel:+994515798327" target="_blank" rel="noreferrer noopener">+994 (51) 579 83 27</a>
+                            </li>
+                            <li>
+                                Tel: <a class="telefon" href="tel:+994556845542" target="_blank" rel="noreferrer noopener">+994 (55) 684 55 42</a>
+                            </li>
+                        
+                    </div>
+                    
+                </div>
+                
+            
+        </div>
+    </footer>
+
+
+</body>
+</html>

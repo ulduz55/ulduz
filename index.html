@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="aze">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SƏKİ XAN SARAYı</title>
+    <link rel="icon" type="image/x-icon" href="/sekil/logo.png">
+    <style>
+        body {
+            
+            margin: 0;
+            padding: 0;
+            background:#0d0c0c;; 
+            height: 100vh;
+            background-size: 100% 100%;
+        }
+        
+        .usthisse {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 999; 
+            border-bottom: 2px solid rgb(240, 237, 233); 
+            backdrop-filter: blur(5px);
+            display: flex;
+            justify-content: center; 
+            align-items: center; 
+            margin-top: 0; 
+            background-color: rgba(37, 23, 5, 0.7); 
+            padding: 10px; 
+        }
+
+        
+        
+        .logo img {
+            width: 100px; 
+            height: 70px;
+            margin-left: 30px; 
+            margin-right: 30px;
+            transition: width 0.3s ease, height 0.3s ease; 
+            
+        }
+        
+        .menu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        
+        .menu ul li {
+            margin-right: 80px;
+        }
+        
+        .menu ul li:last-child {
+            margin-right: 10px; 
+        }
+        
+        .menu ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 18px;
+        }
+        
+        .menu ul li a:hover {
+            color: rgb(185, 163, 37);
+        }
+        .menu ul li {
+        position: relative;
+        }
+
+        .menu ul li:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -3px;
+            width: 100%;
+            height: 3px;
+            background-color: transparent;
+            transition: background-color 0.5s ease;
+        }
+
+        .menu ul li:hover:after {
+         background-color: gold;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .bg-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            margin: 0;
+        }
+        
+
+        .bg-image.active {
+            opacity: 1;
+        }
+
+        footer{
+            
+            bottom: 0;
+            width: 100%;
+            background-color: rgb(37, 23, 5);
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .melumat {
+            
+            display: flex;
+            list-style-type: none;
+            
+            justify-content: center; 
+            align-items: center;
+            justify-content: space-between;
+            text-align: center
+            
+        }
+
+        .email {
+            list-style-type: none;
+            margin-left: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; 
+
+         }
+
+         .email a:hover {
+            color: rgb(185, 163, 37);
+         }
+
+        .telefonlar {
+            color: #ffffff;
+           
+            list-style-type: none;
+            margin-right: 50px;
+            
+        }
+        .telefonlar li {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        .telefonlar a:hover{
+            color:rgb(185, 163, 37) ;
+        }
+
+        .kopya {
+            text-align: center;
+        }
+        .email a,
+        .telefonlar a {
+            color: #ffffff; 
+        }
+        .xett {
+            color: rgba(37, 23, 5,);
+        }
+
+        .xett{
+            background-color: black;
+            
+        }
+
+        
+            
+        .movzu1 {
+    text-align: center;
+    margin-top: 0px; 
+}
+
+.movzu1 h1 {
+    color: #e48f10;
+    font-size: 32px; 
+}
+
+.movzu1 .line {
+    border-top: 3px solid #944606; 
+    width: 40%;
+    margin: 15px auto; 
+}
+
+.movzu1 p {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 20px; 
+    line-height: 1.6;
+}
+
+.movzu1 .btn {
+    background-color: #ae7c18;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-top: 20px; 
+}
+        .movzu1 {
+            display: flex;
+            align-items: center; 
+            justify-content: space-around; 
+            padding: 20px; 
+        }
+
+        .sekil1 img {
+            width: 730px; 
+            height: 730px; 
+            object-fit: cover;
+            border-radius: 10px; 
+        }
+        .movzu1 {
+    padding: 0px; 
+    border: 2px solid white; 
+    border-radius: 15px; 
+}
+.metin1 {
+    flex: 1; 
+    padding-right: 20px; 
+}
+
+
+.movzu2 {
+    text-align: center;
+    margin-top: 0px; 
+}
+
+.movzu2 h1 {
+    color: #e48f10;
+    font-size: 32px; 
+}
+
+.movzu2 .line {
+    border-top: 3px solid #944606; 
+    width: 70%;
+    margin: 15px auto; 
+}
+
+.movzu2 p {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 20px; 
+    line-height: 1.6;
+}
+
+.movzu2 .btn {
+    background-color: #ae7c18;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-top: 20px; 
+}
+        .movzu2 {
+            display: flex;
+            align-items: center; 
+            justify-content: space-around; 
+            padding: 20px; 
+        }
+        .metin2 {
+    flex: 1; 
+    padding-right: 20px;
+}
+
+        .sekil2 img {
+            width: 730px; 
+            height: 730px; 
+            object-fit: cover;
+            border-radius: 10px; 
+        }
+            .movzu2 {
+                padding: 0px; 
+                 border: 2px solid white; 
+                 border-radius: 15px; 
+}
+
+        
+
+        
+        
+
+
+    </style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const images = document.querySelectorAll('.bg-image');
+        let currentImage = 0;
+
+        setInterval(() => {
+            images[currentImage].classList.remove('active');
+            currentImage = (currentImage + 1) % images.length;
+            images[currentImage].classList.add('active');
+        }, 3000);
+    });
+</script>
+
+</head>
+<body>
+    <script>
+        window.addEventListener('scroll', function() {
+            var scrollPosition = window.scrollY;
+            var header = document.querySelector('.usthisse');
+            var logo = document.querySelector('.logo img');
+
+            if (scrollPosition > 0) {
+                header.style.backgroundColor = 'rgb(17, 10, 1, 0.9)';
+                logo.style.width = '80px';
+                logo.style.height = '50px';
+            } else {
+                header.style.backgroundColor = 'rgba(37, 23, 5, 0.7)'; 
+                logo.style.width = '100px';
+                logo.style.height = '70px';
+            }
+        });
+    </script>
+    
+    <div class="usthisse">
+        <div class="menu">
+            <ul>
+                <li><b><a href="rezerv.html">Rezerv Et</a></b></li>
+                <li><b><a href="tarix.html">Tarixi</a></b></li>
+                <li><b><a href="media.html">Media</a></b></li>
+            </ul>
+        </div>
+
+        <div class="logo">
+            <a href="index.html"><img src="sekil/logo.png" alt="Şəki Xan SARAYı"></a>
+        </div>
+
+        <div class="menu">
+            <ul>
+                <li><b><a href="haqqinda.html">Haqqında</a></b></li>
+                <li><b><a href="xerite.html">Xəritə</a></b></li>
+                <li><b><a href="elaqe.html">Əlaqə</a></b></li>
+            </ul>
+        </div>
+    </div>
+
+    <img class="bg-image active" src="sekil/8.JPG" alt="Şəkilinizin Alt Mətni">
+    <img class="bg-image" src="sekil/9.jpg" alt="Şəkilinizin Alt Mətni">
+    <img class="bg-image" src="sekil/6.jpg" alt="Şəkilinizin Alt Mətni">
+    <img class="bg-image" src="sekil/13.jpg" alt="Şəkilinizin Alt Mətni">
+    <img class="bg-image" src="sekil/5.jpg" alt="Şəkilinizin Alt Mətni">
+    <img class="bg-image" src="sekil/1.jpg" alt="Şəkilinizin Alt Mətni">
+    <img class="bg-image" src="sekil/17.jpg" alt="Şəkilinizin Alt Mətni">
+    <img class="bg-image" src="sekil/20.jpg" alt="Şəkilinizin Alt Mətni">
+    <img class="bg-image" src="sekil/12.jpg" alt="Şəkilinizin Alt Mətni">
+    <img class="bg-image" src="sekil/2.jpg" alt="Şəkilinizin Alt Mətni">
+
+    
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br>
+    
+    
+    <div class="xett">
+        <br>
+
+    </div>
+
+    <div class="movzu2">
+        <div class="sekil2">
+            <img src="sekil/qedimsaray.jpg" alt="xancinar">
+        </div>
+        
+        <div class="metin2">
+
+            <h1>Xan sarayının dünəni və bugünü</h1>
+            <div class="line"></div> 
+            <p>«Əgər Azərbaycanın başqa qədim tikililəri olmasaydı, bircə 
+                <br>Şəki Xan sarayını dünyaya göstərmək bəs edərdi». (Nazim Hikmət)</p>
+            <p>Şəki xan sarayının çox böyük şöhrət qazanmış divar rəsmləri XVlll əsrdə <br>yaranmışsa da, 
+                sonralar dəfələrlə təmir edilmişdir.</p>
+            <a href="tarix.html" class="btn">Ətraflı</a>
+        </div>        
+        
+    </div>
+    <div class="movzu1">
+        
+        <div class="metin2">
+
+            <h1>Xan Çinarı</h1>
+            <div class="line"></div> 
+            <p style="color: #ffffff;">Xan Çinarı — Şəki şəhərindəki Şəki xan sarayının həyətində yerləşən ağac.</p>
+            <p style="color: #ffffff;">Çinar Şəkidə Xan sarayının həyətində yerləşir. Ağac 1530-cu ildə əkilib.<br> Gövdəsi 7.3 metrdir. Hündürlüyü 34 metrdir.</p>
+            <a href="haqqinda.html" class="btn">Ətraflı</a>
+        </div>        
+        <div class="sekil2">
+            <img src="sekil/xancinar.png" alt="xancinar">
+        </div>
+    </div>
+
+    <div class="movzu1">
+        <div class="sekil1">
+            <img src="sekil/shebeke.jpg" alt="xancinar">
+        </div>
+        <div class="metin1">
+
+            <h1>Şəbəkə</h1>
+            <div class="line"></div> 
+            <p>Xan sarayına yolu düşən hər bir şəxsi, ilk növbədə, heyrətə gətirən binanın <br>
+                fasadındakı şəbəkə pəncərə və qapılardır. Dünyada analoqu olmayan bu şəbəkələr <br>çox xırda həndəsi fiqurlardan ibarətdir.</p>
+            <a href="haqqinda.html" class="btn">Ətraflı</a>
+        </div>        
+    </div>
+
+
+    <div class="movzu2">
+        
+        <div class="metin2">
+
+            <h1>Xan Sarayına turist axını</h1>
+    <div class="line"></div> 
+    <p>Azərbaycan orta əsr memarlığının əhəmiyyitli abidələrindən biri hesab <br> edilən 
+        və 2019-cu ildə YUNESKO-nun Ümumdünya İrs Siyahısına salınan<br> Şəki Xan
+         Sarayı ziyarətçiləri valeh edir.</p>
+    <p>1762-ci ildə Şəki Xanlığının qurucusu Hacı Çələbi Xanın nəvəsi <br> 
+        Məhəmməd Hüseyin Xan Müştaq tərəfindən yay iqamətgahı olaraq tikilən <br>
+        sarayı üzük qaşı kimi dörd bir tərəfdən möhtəşəm barılar əhatə edir.<br>
+        Hasarların arxasında meşə ilə örtülmüş dağlar yatır. Saray ölkədəki <br>
+        9 günlük Nevruz tətilində minlərlə yerli və xarici turist tərəfindən ziyarət edilir.</p>
+        <a href="haqqinda.html" class="btn">Ətraflı</a>
+        </div>        
+        <div class="sekil2">
+            <img src="sekil/turist4.jpg" alt="xancinar">
+        </div>
+    </div>
+
+
+
+    
+
+
+
+<footer>
+    <div class="slthisse">
+        
+            <br>
+            <div class="melumat">
+                <div class="email">
+                    
+                        <li>E-poçt: <a href="mailto:elicanismayilov@hotmail.com">elicanismayilov@hotmail.com</a></li>
+                        <li>E-poçt: <a href="mailto:ulduzsheki@hotmail.com">ulduzsheki@hotmail.com</a></li>
+                </div>
+                <div class="kopya">
+                    <p>&copy; 2024 Şəki Xan Sarayı - Bütün hüquqlar qorunur.</p>
+                </div>
+                <div class="telefonlar">
+                    
+                        <li>
+                            Tel: <a class="telefon" href="tel:+994515798327" target="_blank" rel="noreferrer noopener">+994 (51) 579 83 27</a>
+                        </li>
+                        <li>
+                            Tel: <a class="telefon" href="tel:+994556845542" target="_blank" rel="noreferrer noopener">+994 (55) 684 55 42</a>
+                        </li>
+                    
+                </div>
+                
+            </div>
+            
+        
+    </div>
+</footer>
+
+
+
+</body>
+</html>

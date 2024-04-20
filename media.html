@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="aze">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SƏKİ XAN SARAYı</title>
+    <link rel="icon" type="image/x-icon" href="/sekil/logo.png">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: rgb(26, 24, 24);
+            /* background: rgb(37, 23, 5);  */
+            height: 100vh;
+            background-size: 100% 100%;
+        }
+        
+        .usthisse {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 999; 
+            border-bottom: 2px solid rgb(240, 237, 233); 
+            backdrop-filter: blur(5px);
+            display: flex;
+            justify-content: center; 
+            align-items: center; 
+            margin-top: 0; 
+            background-color: rgba(37, 23, 5, 0.7); 
+            padding: 10px; 
+        }
+
+        .img {
+            height: 100%;
+            width: 100%;
+        }
+        
+        
+        .logo img {
+            width: 100px; 
+            height: 70px;
+            margin-left: 30px; 
+            margin-right: 30px;
+            transition: width 0.3s ease, height 0.3s ease; 
+            
+        }
+        
+        .menu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        
+        .menu ul li {
+            margin-right: 80px;
+        }
+        
+        .menu ul li:last-child {
+            margin-right: 10px; 
+        }
+        
+        .menu ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 18px;
+        }
+        
+        .menu ul li a:hover {
+            color: rgb(185, 163, 37);
+        }
+        .menu ul li {
+        position: relative;
+        }
+
+        .menu ul li:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -3px;
+            width: 100%;
+            height: 3px;
+            background-color: transparent;
+            transition: background-color 0.5s ease;
+        }
+
+        .menu ul li:hover:after {
+         background-color: gold;
+        }
+
+
+        footer{
+            background-color: rgb(37, 23, 5);
+            color: #ffffff;
+        }
+
+        .melumat {
+            
+            display: flex;
+            list-style-type: none;
+            
+            justify-content: center; 
+            align-items: center;
+            justify-content: space-between;
+            text-align: center
+            
+        }
+
+        .email {
+            list-style-type: none;
+            margin-left: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; 
+
+         }
+
+         .email a:hover {
+            color: rgb(185, 163, 37);
+         }
+
+        .telefonlar {
+           
+            list-style-type: none;
+            margin-right: 50px;
+            
+        }
+        .telefonlar li {
+            color: #ffffff;
+        }
+        .telefonlar a:hover{
+            color:rgb(185, 163, 37) ;
+        }
+
+        .kopya {
+            text-align: center;
+        }
+        .email a,
+        .telefonlar a {
+            color: #ffffff; 
+        }
+        .xett {
+            color: rgba(37, 23, 5,);
+        }
+        .basliq  {
+            text-align: center;
+            margin-top: 0px; 
+            color: #e48f10;
+            font-size: 32px;  
+            
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        .image {
+            position: relative;
+        }
+
+        .image img {
+            width: 100%; 
+            height: 300px; 
+            max-width: 100%; 
+            max-height: 100%; 
+            border: 1kkpx solid #ccc; 
+            transition: transform 0.2s ease-in-out;
+            cursor: pointer; 
+        }
+
+        .image img:hover {
+            transform: scale(1.1); 
+        }
+
+        .image::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(7, 3, 67, 0.308); 
+            opacity: 0;
+            transition: opacity 0.2s ease-in-out;
+            border: 2px solid white; 
+        }
+
+        .image:hover::after {
+            opacity: 1; 
+        }
+
+        
+        .fullscreen-container {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .fullscreen-img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 40px; 
+            right: 40px; 
+            color: #fff;
+            font-size: 56px; 
+            cursor: pointer;
+        }
+
+        .rotate-btns {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding: 0 30px;
+            box-sizing: border-box;
+        }
+
+        .rotate-btn {
+            font-size: 24px;
+            cursor: pointer;
+            color: #fff;
+        }
+
+        .basliq .line {
+        border-top: 5px solid #944606; 
+        width: 70%;
+        margin: 20px auto; 
+}
+
+       
+
+
+    </style>
+</head>
+<body>
+    <script>
+        window.addEventListener('scroll', function() {
+            var scrollPosition = window.scrollY;
+            var header = document.querySelector('.usthisse');
+            var logo = document.querySelector('.logo img');
+
+            if (scrollPosition > 0) {
+                header.style.backgroundColor = 'rgb(17, 10, 1, 0.9)';
+                logo.style.width = '80px';
+                logo.style.height = '50px';
+            } else {
+                header.style.backgroundColor = 'rgba(37, 23, 5, 0.7)'; 
+                logo.style.width = '100px';
+                logo.style.height = '70px';
+            }
+        });
+    </script>
+    
+    <div class="usthisse">
+        <div class="menu">
+            <ul>
+                <li><b><a href="rezerv.html">Rezerv Et</a></b></li>
+                <li><b><a href="tarix.html">Tarixi</a></b></li>
+                <li><b><a href="media.html">Media</a></b></li>
+            </ul>
+        </div>
+
+        <div class="logo">
+            <a href="index.html"><img src="sekil/logo.png" alt="Şəki Xan SARAYı"></a>
+        </div>
+
+        <div class="menu">
+            <ul>
+                <li><b><a href="haqqinda.html">Haqqında</a></b></li>
+                <li><b><a href="xerite.html">Xəritə</a></b></li>
+                <li><b><a href="elaqe.html">Əlaqə</a></b></li>
+            </ul>
+        </div>
+    </div>
+
+   <br><br><br><br><br>
+    <div class="basliq">
+        <h2>ÜMUMİ ŞƏKİLLƏR</h2>
+        <div class="line"></div> 
+    </div>
+
+    <div class="gallery">
+        <div class="image">
+            <img src="sekil/1.jpg" alt="Şekil 1">
+        </div>
+        <div class="image">
+            <img src="sekil/2.jpg" alt="Şekil 1">
+        </div>
+        <div class="image">
+            <img src="sekil/3.jpg" alt="Şekil 1">
+        </div>
+        <div class="image">
+            <img src="sekil/4.jpg" alt="Şekil 1">
+        </div>
+        <div class="image">
+            <img src="sekil/5.jpg" alt="Şekil 1">
+        </div>
+        <div class="image">
+            <img src="sekil/6.jpg" alt="Şekil 1">
+        </div>
+        <div class="image">
+            <img src="sekil/7.jpg" alt="Şekil 1">
+        </div>
+        <div class="image">
+            <img src="sekil/8.jpg" alt="Şekil 1">
+        </div>
+        <div class="image">
+            <img src="sekil/9.jpg" alt="Şekil 1">
+        </div>
+        <div class="image">
+            <img src="sekil/10.jpg" alt="Şekil 1">
+        </div>
+        <div class="image">
+            <img src="sekil/11.jpg" alt="Şekil 1">
+        </div>
+        <div class="image">
+            <img src="sekil/12.jpg" alt="Şekil 1">
+        </div>
+        <div class="image">
+            <img src="sekil/13.jpg" alt="Şekil 1">
+        </div>
+        <div class="image">
+            <img src="sekil/14.jpg" alt="Şekil 1">
+        </div>
+        <div class="image">
+            <img src="sekil/15.jpg" alt="Şekil 1">
+        </div>
+        <div class="image">
+            <img src="sekil/16.jpg" alt="Şekil 1">
+        </div>
+        <div class="image">
+            <img src="sekil/17.jpg" alt="Şekil 1">
+        </div>
+        <div class="image">
+            <img src="sekil/18.jpg" alt="Şekil 1">
+        </div>
+        <div class="image">
+            <img src="sekil/19.jpg" alt="Şekil 1">
+        </div>
+        <div class="image">
+            <img src="sekil/20.jpg" alt="Şekil 1">
+        </div>
+        <div class="image">
+            <img src="sekil/21.jpg" alt="Şekil 1">
+        </div>
+        <div class="image">
+            <img src="sekil/22.jpg" alt="Şekil 1">
+        </div>
+        <div class="image">
+            <img src="sekil/xancinar.png" alt="Şekil 1">
+        </div>
+        <div class="image">
+            <img src="sekil/shebeke.jpg" alt="Şekil 1">
+        </div>
+        
+    </div>
+
+    <div class="fullscreen-container">
+        <span class="close-btn">&times;</span>
+        <img class="fullscreen-img" src="" alt="Tam Ekran Görüntü">
+        <div class="rotate-btns">
+            <span class="rotate-btn" id="rotate-left">&#9664;</span>
+            <span class="rotate-btn" id="rotate-right">&#9654;</span>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    const images = document.querySelectorAll('.image img');
+    const fullscreenContainer = document.querySelector('.fullscreen-container');
+    const fullscreenImg = document.querySelector('.fullscreen-img');
+    const closeBtn = document.querySelector('.close-btn');
+    const rotateLeftBtn = document.querySelector('#rotate-left');
+    const rotateRightBtn = document.querySelector('#rotate-right');
+
+    images.forEach((image, index) => {
+        image.parentNode.addEventListener('click', () => {
+            fullscreenImg.src = image.src;
+            fullscreenContainer.style.display = 'flex';
+            fullscreenImg.setAttribute('data-index', index);
+        });
+    });
+
+    closeBtn.addEventListener('click', () => {
+        fullscreenContainer.style.display = 'none';
+    });
+
+    rotateLeftBtn.addEventListener('click', () => {
+        const currentIndex = parseInt(fullscreenImg.getAttribute('data-index'));
+        const prevIndex = currentIndex === 0 ? images.length - 1 : currentIndex - 1;
+        fullscreenImg.src = images[prevIndex].src;
+        fullscreenImg.setAttribute('data-index', prevIndex);
+    });
+
+    rotateRightBtn.addEventListener('click', () => {
+        const currentIndex = parseInt(fullscreenImg.getAttribute('data-index'));
+        const nextIndex = currentIndex === images.length - 1 ? 0 : currentIndex + 1;
+        fullscreenImg.src = images[nextIndex].src;
+        fullscreenImg.setAttribute('data-index', nextIndex);
+    });
+
+    
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'ArrowLeft') {
+            rotateLeftBtn.click();
+        } else if (event.key === 'ArrowRight') {
+            rotateRightBtn.click();
+        }
+    });
+
+});
+
+    </script>
+
+    <footer>
+        <div class="slthisse">
+            
+                <br>
+                <div class="melumat">
+                    <div class="email">
+                        
+                            <li>E-poçt: <a href="mailto:elicanismayilov@hotmail.com">elicanismayilov@hotmail.com</a></li>
+                            <li>E-poçt: <a href="mailto:ulduzsheki@hotmail.com">ulduzsheki@hotmail.com</a></li>
+                        
+                    </div>
+                    <div class="kopya">
+                        <p>&copy; 2024 Şəki Xan Sarayı - Bütün hüquqlar qorunur.</p>
+                    </div>
+                    <div class="telefonlar">
+                        
+                            <li>
+                                Tel: <a class="telefon" href="tel:+994515798327" target="_blank" rel="noreferrer noopener">+994 (51) 579 83 27</a>
+                            </li>
+                            <li>
+                                Tel: <a class="telefon" href="tel:+994556845542" target="_blank" rel="noreferrer noopener">+994 (55) 684 55 42</a>
+                            </li>
+                        
+                    </div>
+                    
+                </div>
+                
+            
+        </div>
+    </footer>
+
+
+</body>
+</html>
