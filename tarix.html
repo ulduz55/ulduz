@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SƏKİ XAN SARAYı</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="/sekil/logo.png">
     <style>
         body {
@@ -85,10 +86,7 @@
             transition: background-color 0.5s ease;
         }
 
-        .menu ul li:hover:after {
-         background-color: gold;
-        }
-
+        
 
         footer{
             background-color: rgb(37, 23, 5);
@@ -219,6 +217,25 @@
     line-height: 1.6;
     margin-left: 5px;
 }
+
+
+.menu ul li a:before {
+            position: absolute;
+            content: '';
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 3px;
+            background: white;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform .4s linear;
+        }
+
+        .menu ul li a:hover:before{
+            transform: scaleX(1);
+            transform-origin: left;
+        }
  
     </style>
 </head>
